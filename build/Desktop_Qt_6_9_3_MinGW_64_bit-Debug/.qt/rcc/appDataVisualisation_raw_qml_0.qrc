@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/DataVisualisation/">
+    <file alias="Main.qml">C:/Users/loekd/Desktop/DataVisualisation/Main.qml</file>
+  </qresource>
+</RCC>
+

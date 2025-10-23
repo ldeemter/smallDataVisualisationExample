@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/DataVisualisation">
+    <file alias="qmldir">C:/Users/loekd/Desktop/DataVisualisation/build/Desktop_Qt_6_9_3_MinGW_64_bit-Debug/DataVisualisation/qmldir</file>
+  </qresource>
+</RCC>
+

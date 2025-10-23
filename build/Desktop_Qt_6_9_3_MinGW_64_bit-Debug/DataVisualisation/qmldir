@@ -1,0 +1,6 @@
+module DataVisualisation
+typeinfo appDataVisualisation.qmltypes
+prefer :/qt/qml/DataVisualisation/
+Main 1.0 Main.qml
+depends QtQuick
+

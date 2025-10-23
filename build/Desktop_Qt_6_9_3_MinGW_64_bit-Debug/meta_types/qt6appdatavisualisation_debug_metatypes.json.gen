@@ -1,0 +1,86 @@
+[
+    {
+        "classes": [
+            {
+                "className": "DataProvider",
+                "lineNumber": 17,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "tipsPerDay",
+                        "notify": "dataChanged",
+                        "read": "tipsPerDay",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QList<int>",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "maxPerDay",
+                        "notify": "dataChanged",
+                        "read": "maxPerDay",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "allTips",
+                        "notify": "dataChanged",
+                        "read": "allTips",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QList<double>",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "allTotalBills",
+                        "notify": "dataChanged",
+                        "read": "allTotalBills",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QList<double>",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "DataProvider",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "dataChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "dataprovider.h",
+        "outputRevision": 69
+    }
+]

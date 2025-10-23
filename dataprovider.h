@@ -17,19 +17,24 @@ struct TipData {
 class DataProvider : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QVector<int> tipsPerDay READ tipsPerDay NOTIFY dataChanged)
-    Q_PROPERTY(int maxPerDay READ maxPerDay NOTIFY dataChanged)
-    Q_PROPERTY(QVector<double> allTips READ allTips NOTIFY dataChanged)
-    Q_PROPERTY(QVector<double> allTotalBills READ allTotalBills NOTIFY dataChanged)
-
+    Q_PROPERTY(QVector<double> tipsPerDay READ tipsPerDay NOTIFY dataChanged)
+    Q_PROPERTY(double maxTipSum READ maxTipSum NOTIFY dataChanged)
+    Q_PROPERTY(double maxSingleTip READ maxSingleTip NOTIFY dataChanged)
+    Q_PROPERTY(double maxSingleBill READ maxSingleBill NOTIFY dataChanged)
+    Q_PROPERTY(QVector<double> getAllTips READ getAllTips NOTIFY dataChanged)
+    Q_PROPERTY(QVector<double> getAllBills READ getAllBills NOTIFY dataChanged)
+    Q_PROPERTY(QVector<int> getAllSize READ getAllSize NOTIFY dataChanged )
 public:
     explicit DataProvider(QObject* parent = nullptr);
 
     // Data accessors
-    QVector<int> tipsPerDay() const;
-    int maxPerDay() const;
-    QVector<double> allTips() const;
-    QVector<double> allTotalBills() const;
+    QVector<double> tipsPerDay() const;
+    double maxTipSum() const;
+    double maxSingleTip() const;
+    double maxSingleBill() const;
+    QVector<double> getAllTips() const;
+    QVector<double> getAllBills() const;
+    QVector<int> getAllSize() const;
 
     // Method to populate/update data
     void setTips(const std::vector<TipData>& newTips);

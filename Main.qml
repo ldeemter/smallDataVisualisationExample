@@ -8,6 +8,8 @@ ApplicationWindow {
     width: 1600
     height: 800
     title: "Dynamic Bar Graph"
+    minimumWidth: 800
+    minimumHeight: 400
 
     GridLayout {
         anchors.fill: parent
@@ -16,6 +18,8 @@ ApplicationWindow {
         rows: 2
         columnSpacing: 5
         rowSpacing: 0
+
+
 
         // Header for Bar Chart
         Rectangle {
@@ -81,7 +85,7 @@ ApplicationWindow {
                 }
                 axisY: ValueAxis {
                     min: 0
-                    max: dataProvider.maxPerDay
+                    max: dataProvider.maxTipSum
                     subTickCount: 4
                 }
                 BarSeries {
@@ -113,7 +117,7 @@ ApplicationWindow {
 
                 axisX: ValueAxis {
                     min: 0
-                    max: 30
+                    max: 50
                     titleText: "Total Bill ($)"
                 }
                 axisY: ValueAxis {
@@ -142,10 +146,10 @@ ApplicationWindow {
                         function onDataChanged() {
                             console.log("Data changed - updating scatter plot")
                             series.clear()
-                            let tips = dataProvider.allTips
-                            let bills = dataProvider.allTotalBills
+                            let tips = dataProvider.getAllTips
+                            let bills = dataProvider.getAllBills
                             for (let i = 0; i < tips.length; i++) {
-                                series.append(bills[i], tips[i])
+                                series.append(tips[i], bills[i])
                             }
                         }
                     }
@@ -153,13 +157,10 @@ ApplicationWindow {
                     Component.onCompleted: {
                         console.log("Scatter series completed - loading initial data")
                         if (dataProvider) {
-                            let tips = dataProvider.allTips
-                            let bills = dataProvider.allTotalBills
-                            console.log("Initial tips:", tips)
-                            console.log("Initial bills:", bills)
+                            let tips = dataProvider.getAllTips
+                            let bills = dataProvider.getAllBills
                             if (tips && bills) {
                                 for (let i = 0; i < tips.length; i++) {
-                                    console.log('Added point:', bills[i], tips[i])
                                     series.append(bills[i], tips[i])
                                 }
                             }
